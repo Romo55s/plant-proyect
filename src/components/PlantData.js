@@ -1,5 +1,14 @@
 import React from "react";
-import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Pagination, getKeyValue} from "@nextui-org/react";
+import {
+  Table,
+  TableHeader,
+  TableColumn,
+  TableBody,
+  TableRow,
+  TableCell,
+  Pagination,
+  getKeyValue,
+} from "@nextui-org/react";
 
 function PlantData({ data }) {
   const columns = [
@@ -59,7 +68,11 @@ function PlantData({ data }) {
       }
     >
       <TableHeader columns={columns}>
-        {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
+        {(column) => (
+          <TableColumn key={column.key} align="center">
+            {column.label}
+          </TableColumn>
+        )}
       </TableHeader>
       <TableBody items={items}>
         {(item) => (
