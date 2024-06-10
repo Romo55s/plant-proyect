@@ -59,7 +59,7 @@ function PlantData({ data }) {
             isCompact
             showControls
             showShadow
-            color="secondary"
+            color="primary"
             page={page}
             total={pages}
             onChange={(page) => setPage(page)}
@@ -69,8 +69,8 @@ function PlantData({ data }) {
     >
       <TableHeader columns={columns}>
         {(column) => (
-          <TableColumn key={column.key} align="center">
-            {column.label}
+          <TableColumn  key={column.key} className="text-center">
+            {column.label} 
           </TableColumn>
         )}
       </TableHeader>
